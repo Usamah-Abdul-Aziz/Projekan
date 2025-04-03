@@ -140,7 +140,7 @@ footer {
 /* Responsive Design for max-width 480px */
 @media (max-width: 480px) {
     .container {
-        width: 75%;
+        width: 80%;
     }
     nav ul li {
         display: block;
