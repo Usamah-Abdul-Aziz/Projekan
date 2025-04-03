@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Log Absensi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <h1>Web Absensi</h1>
+            <ul>
+                <li><a href="index.html">Absen</a></li>
+                <li><a href="log.html" class="active">Log Absen</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section id="log-detail" class="container">
+        <h2>Detail Absensi</h2>
+        <p id="selected-date"></p>
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Waktu Absen</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Ahmad Surya</td>
+                    <td>08:05</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Budi Santoso</td>
+                    <td>08:15</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Citra Lestari</td>
+                    <td>08:25</td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="log.html" class="btn">Kembali ke Log</a>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Web Absensi | Dibuat dengan ❤️ untuk Perusahaan</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Ambil parameter tanggal dari URL dan tampilkan
+        const urlParams = new URLSearchParams(window.location.search);
+        const date = urlParams.get('date');
+        document.getElementById('selected-date').textContent = `Tanggal: ${date}`;
+    </script>
+</body>
+</html>

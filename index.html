@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <h1>Web Absensi</h1>
+            <ul>
+                <li><a href="index.html" class="active">Absen</a></li>
+                <li><a href="log.html">Log Absen</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section id="absen" class="container">
+        <h2>Halaman Absen</h2>
+        <p>Silakan klik tombol di bawah untuk melakukan absensi menggunakan face recognition.</p>
+        <div class="absen-box">
+            <video id="video" width="320" height="240" autoplay></video>
+            <button class="btn" id="capture">Absen Sekarang</button>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Web Absensi | Dibuat dengan ❤️ untuk Perusahaan</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('capture').addEventListener('click', function() {
+            alert('Absensi berhasil (dummy)');
+        });
+    </script>
+</body>
+</html>
