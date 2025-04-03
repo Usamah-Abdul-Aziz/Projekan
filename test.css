@@ -1,0 +1,13 @@
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    .absen-box, .log-list, table {
+        width: 100%;
+    }
+}
