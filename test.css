@@ -1,51 +1,63 @@
-/* Global Styles */
+/* General Styles */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    color: #333;
 }
 
 .container {
     width: 90%;
+    max-width: 1200px;
     margin: auto;
+    padding: 20px;
     overflow: hidden;
-    padding: 20px 0;
 }
 
 /* Navigation */
 nav {
-    background: #004aad;
-    color: #fff;
+    background-color: #007bff;
+    color: white;
     padding: 15px 0;
-    text-align: center;
-}
-nav ul {
-    padding: 0;
-    list-style: none;
-}
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-}
-nav ul li a.active {
-    border-bottom: 2px solid #ff7b00;
 }
 
-/* Sections */
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Section */
 section {
-    text-align: center;
+    background: white;
     padding: 20px;
-    background: #fff;
-    margin-top: 20px;
-    border-radius: 10px;
+    border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #007bff;
 }
 
 /* Absen Section */
@@ -79,87 +91,95 @@ video {
     background: #e66900;
 }
 
-/* Log List */
-.log-list {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-}
-.log-list li {
-    width: 90%;
-    background: #007bff;
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 10px;
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    text-align: center; 
-}
-.log-list li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* Log Table */
+/* Table */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
 }
+
 th, td {
     border: 1px solid #ddd;
     padding: 10px;
-    text-align: center;
+    text-align: left;
 }
+
 th {
-    background: #007bff;
-    color: #fff;
-}
-tbody tr:nth-child(even) {
-    background: #f9f9f9;
+    background-color: #007bff;
+    color: white;
 }
 
 /* Footer */
 footer {
-    background: #333;
-    color: #fff;
     text-align: center;
-    padding: 20px 0;
-    margin-top: 20px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     display: flex; 
     justify-content: center; 
     align-items: baseline;
     text-align: center; 
+    margin-top: 200px;
 }
 
-/* Responsive Design */
+/* Responsive Styles */
 @media (max-width: 768px) {
-    .container {
-        width: 95%;
+    nav .container {
+        flex-direction: column;
+        text-align: center;
     }
+
+    nav ul {
+        flex-direction: column;
+    }
+
     nav ul li {
-        display: block;
         margin: 10px 0;
     }
-    .absen-box, .log-list, table {
+
+    .absen-box video {
         width: 100%;
+        height: auto;
     }
 }
 
-/* Responsive Design for max-width 480px */
 @media (max-width: 480px) {
     .container {
-        width: 100%;
+        width: 95%;
+        padding: 10px;
     }
+
+    nav {
+        padding: 10px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
     nav ul li {
-        display: block;
-        margin: 8px 0;
+        margin: 5px 0;
     }
-    .absen-box, .log-list, table {
+
+    .absen-box video {
         width: 100%;
+        height: auto;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 14px;
     }
 }
