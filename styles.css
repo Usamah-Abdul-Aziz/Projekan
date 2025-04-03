@@ -135,3 +135,42 @@ footer {
         width: 100%;
     }
 }
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    .absen-box, .log-list, table {
+        width: 100%;
+    }
+}
+
+/* Responsive Design for max-width 480px */
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+    nav h1 {
+        font-size: 18px;
+    }
+    nav ul li {
+        margin: 5px 0;
+    }
+    .btn {
+        width: 100%;
+        padding: 15px;
+    }
+    .absen-box video {
+        width: 100%;
+        height: auto;
+    }
+    table th, table td {
+        padding: 8px;
+    }
+}
